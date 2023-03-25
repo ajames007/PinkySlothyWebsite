@@ -32,7 +32,7 @@
 .home_subtitle{
   font-size: 20px;
   color: white  ;
-  margin-top: -40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -60,4 +60,22 @@
 
 .data{
   display: none;
+}
+
+/* Make the button round and increase its size */
+.g-signin2 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+
+.g-signin2 > div > div {
+  border-radius: 50px !important;
+}
+
+.g-signin2 > div > div > span {
+  font-size: 16px !important;
 }
