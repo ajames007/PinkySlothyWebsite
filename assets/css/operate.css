@@ -1,0 +1,136 @@
+.container {
+  display: grid;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.operate_title_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_bar {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search_bar input {
+  width: 800px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search_bar button {
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.operte_search_icon{
+  width: 24px;
+}
+
+.operate_btn_container{
+  margin-top: 10px;
+}
+
+.operate_btn{
+  display: inline-block;
+  background-color: #E5634B;
+  padding: 12px 28px;
+  text-align: center;
+  justify-content: center;
+  max-width: 200px;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: background-color color 0.5s ease;
+  text-decoration: none;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #E5634B;
+}
+
+.display_container{
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: white;
+  padding: 4px 4px 10px 4px;
+
+}
+
+.display_preview{
+  padding: 2px 2px 2px 2px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.display_info_grid{
+  padding-top: 2px;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  margin-top: 20px;
+  background-color: #f1f1f1;
+}
+
+.display_data_container{
+  display: grid;
+  margin-right: 1em;
+  padding-right: 1em;
+  line-height: 1.2em;
+}
+
+.display_img{
+  width: 100%;
+}
+
+.display_province{
+  margin-top: -35px;
+}
+
+.display_type{
+  margin-top: -50px;
+}
+
+.display_Date{
+  font-size: 30px;
+  
+}
+
+.display_title{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+
+.edit_btn{
+  width: 24px;
+}
+
+.edit_btn:hover{
+  cursor: pointer;
+}

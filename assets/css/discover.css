@@ -1,0 +1,54 @@
+.swiper {
+  width: 800px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 800px;
+  height: 800px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.discover_data{
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+
+.discover_title{
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+}
+.discover_img{
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.discover_img:hover{
+  transform: scale(1.1);
+  z-index: 1;
+}
+.discover_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.section_title {
+font-size: 3rem;
+font-weight: bold;
+color: #222222;
+text-align: center;
+margin: 2rem 0;
+}

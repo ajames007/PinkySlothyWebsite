@@ -1,0 +1,78 @@
+.container {
+  display: grid;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  
+}
+
+.edit_title_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.edit_container{
+  width: 1500px;
+  background-color: lightcoral;
+}
+
+
+
+.delete_btn{
+  width: 24px;
+}
+
+.edit_img_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  justify-content: space-between;
+  margin-top: 10px;
+  
+}
+
+.img_preview1,
+.img_preview2,
+.img_preview3,
+.img_preview4 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: lightsalmon;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100%; /* This sets the height equal to the width */
+  position: relative; /* This is needed for absolute positioning */
+}
+
+.img_preview1 img,
+.img_preview2 img,
+.img_preview3 img,
+.img_preview4 img{ 
+  max-width: 50px;
+  position: absolute; /* This centers the image within the container */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+ .img_preview1[data-img], .img_preview2[data-img], .img_preview3[data-img], .img_preview4[data-img] {
+        background-image: none;
+      }
+
+
+.img_preview1 input[type="file"], .img_preview2 input[type="file"], .img_preview3 input[type="file"], .img_preview4 input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 2;
+      }

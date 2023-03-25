@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/header_black.css">
+    <link rel="stylesheet" href="/assets/css/general.css">
+
+
+    <style>
+
+
+      .plan_name {
+        text-align: center;
+        margin-top: 2em;
+        font-size: 2em;
+        font-weight: 600;
+        position: static;
+      }
+
+      .display_container{
+        max-width: 800px;
+        justify-content: left;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color: white;
+        padding: 2px 2px 2px 2px;
+
+      }
+
+      .display_preview{
+        padding: 2px 2px 2px 2px;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-content: left;
+        align-items: center;
+        background-color: white;
+        margin-top: 20px;
+      }
+
+      .display_info_grid{
+        padding-top: 2px;
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        margin-top: 20px;
+        background-color: #f1f1f1;
+      }
+
+      .display_data_container{
+        display: grid;
+        margin-right: 1em;
+        padding-right: 1em;
+        line-height: 1.2em;
+      }
+
+      .display_img{
+        width: 100%;
+      }
+
+      .display_province{
+        margin-top: -35px;
+      }
+
+      .display_type{
+        margin-top: -50px;
+      }
+
+      .display_Date{
+        font-size: 30px;
+        
+      }
+
+      .display_title{
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .back_button {
+        position: relative;
+        top: calc(70px - 50%); /* The distance from the top of the container to the center of the button */
+        left: calc(50% - 400px); /* The distance from the left of the container to the center of the button */
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #E5634B;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        margin-top: 30px;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="left-section">
+        <a href="index.html" class="logo_black">PJPlan</a>
+      </div>
+
+      <div class="right-section">
+        <a href="myPlan.html" class="myPlan_page_black">My Plan</a>
+        <a href="test.html" class="discover_page_black">Discover</a>
+        <a href="#" class="login_page" id="above-loginBtn" onclick="toggleDropdown()">Login</a>
+      </div>
+    </header>
+    
+    <div class="plan_name">Plan name 1</div>
+    <a href="result.html" class="back_button">แก้ไข</a>
+    <div class="display_container">
+      <div class="display_preview">
+        <div>Date</div>
+        <div class="display_Date">Sunday, 5th Febuary</div>
+        <div class="display_info_grid">
+          <div class="display_data_container">
+            <div class="display_title">ชื่อสถานที่ท่องเที่ยว1</div>
+            <div class="display_province">ชื่อจังหวัด1</div>
+            <div class="display_type">ชื่อปรเภทสถานที่1</div>
+          </div>
+          <img src="/assets/img/test_image1.jpg" class="display_img">
+        </div>
+
+        <div class="display_info_grid">
+          <div class="display_data_container">
+            <div class="display_title">ชื่อสถานที่ท่องเที่ยว2</div>
+            <div class="display_province">ชื่อจังหวัด2</div>
+            <div class="display_type">ชื่อปรเภทสถานที่2</div>
+          </div>
+          <img src="/assets/img/test_image2.jpg" class="display_img">
+        </div>
+      </div>
+
+      <div class="display_preview">
+        <div>Date</div>
+        <div class="display_Date">Monday, 6th Febuary</div>
+        <div class="display_info_grid">
+          <div class="display_data_container">
+            <div class="display_title">ชื่อสถานที่ท่องเที่ยว3</div>
+            <div class="display_province">ชื่อจังหวัด3</div>
+            <div class="display_type">ชื่อปรเภทสถานที่3</div>
+          </div>
+          <img src="/assets/img/test_image3.jpg" class="display_img">
+        </div>
+
+        <div class="display_info_grid">
+          <div class="display_data_container">
+            <div class="display_title">ชื่อสถานที่ท่องเที่ยว4</div>
+            <div class="display_province">ชื่อจังหวัด4</div>
+            <div class="display_type">ชื่อปรเภทสถานที่4</div>
+          </div>
+          <img src="/assets/img/test_image4.jpg" class="display_img">
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

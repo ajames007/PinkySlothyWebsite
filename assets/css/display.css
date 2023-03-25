@@ -1,0 +1,75 @@
+.plan_name {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 2em;
+  font-weight: 600;
+  position: static;
+}
+
+.display_container{
+  max-width: 800px;
+  justify-content: left;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: lightblue;
+}
+
+.display_preview{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+  background-color: lightcoral;
+  margin-top: 20px;
+}
+
+.display_info_grid{
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  margin-top: 20px;
+}
+
+.display_data_container{
+  display: grid;
+  margin-right: 1em;
+  padding-right: 1em;
+  line-height: 1.2em;
+}
+
+.display_img{
+  width: 100%;
+}
+
+.display_province{
+  margin-top: -35px;
+}
+
+.display_type{
+  margin-top: -50px;
+}
+
+.display_Date{
+  font-size: 30px;
+  
+}
+
+.display_title{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.back_button {
+  position: relative;
+  top: calc(70px - 50%); /* The distance from the top of the container to the center of the button */
+  left: calc(50% - 400px); /* The distance from the left of the container to the center of the button */
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #E5634B;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 30px;
+}

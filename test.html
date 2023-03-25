@@ -1,0 +1,293 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Test</title>
+      <meta charset="UTF-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/assets/css/header_black.css">
+      <link rel="stylesheet" href="/assets/css/general.css">
+      <link rel="stylesheet" href="/assets/css/test.css">
+    </head>
+    <body class="body_result">
+
+      <header class="header" id="header">
+        <div class="left-section">
+          <a href="index.html" class="logo_black">PJPlan</a>
+        </div>
+
+        <div class="right-section">
+          <a href="myPlan.html" class="myPlan_page_black">My Plan</a>
+          <a href="test.html" class="discover_page_black">Discover</a>
+          <a href="#" class="login_page" id="above-loginBtn" onclick="toggleDropdown()">Login</a>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="section section1">สถานที่แนะนำ
+          <div class="สถานที่แนะนำ_container">
+            <div class="Restuarant" data-section="Restuarant">Restuarant</div>
+            <div class="Coffee" data-section="Coffee">Coffee</div>
+            <div class="ECS" data-section="ECS">EV Charging Station</div>
+            <div class="Tourist_Attraction" data-section="Tourist_Attraction">Tourist_Attraction</div>  
+          </div>
+          <div class="TA_container">
+            <div class="TA_preview">
+              <div class="TA_thumbnail">
+                <img src="/assets/img/test_image1.jpg">
+              </div>
+              <div class="TA_info_grid">
+                <h4 class="TA_title">ชื่อสถานที่ท่องเที่ยว1</h4>
+                <p class="TA_province">ชื่อจังหวัด1</p>
+                <p class="TA_type">ชื่อปรเภทสถานที่1</p>
+                <div class="lastLine_container">
+                    <button class="plusInCircle_icon_Btn">
+                      <img src="/assets/icons/plusIncircle.png" class="plusInCircle_icon">
+                    </button>
+                    <button class="icon_Btn">
+                      <img src="/assets/icons/map.png" class="map_icon">
+                    </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="TA_preview">
+              <div class="TA_thumbnail">
+                <img src="/assets/img/test_image2.jpg">
+              </div>
+              <div class="TA_info_grid">
+                <h4 class="TA_title">ชื่อสถานที่ท่องเที่ยว2</h4>
+                <p class="TA_province">ชื่อจังหวัด2</p>
+                <p class="TA_type">ชื่อปรเภทสถานที่2</p>
+                <div class="lastLine_container">
+                    <button class="plusInCircle_icon_Btn">
+                      <img src="/assets/icons/plusIncircle.png" class="plusInCircle_icon">
+                    </button>
+                    <button class="icon_Btn">
+                      <img src="/assets/icons/map.png" class="map_icon">
+                    </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="TA_preview">
+              <div class="TA_thumbnail">
+                <img src="/assets/img/test_image3.jpg">
+              </div>
+              <div class="TA_info_grid">
+                <h4 class="TA_title">ชื่อสถานที่ท่องเที่ยว3</h4>
+                <p class="TA_province">ชื่อจังหวัด3</p>
+                <p class="TA_type">ชื่อปรเภทสถานที่3</p>
+                <div class="lastLine_container">
+                    <button class="plusInCircle_icon_Btn">
+                      <img src="/assets/icons/plusIncircle.png" class="plusInCircle_icon">
+                    </button>
+                    <button class="icon_Btn">
+                      <img src="/assets/icons/map.png" class="map_icon">
+                    </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="TA_preview">
+              <div class="TA_thumbnail">
+                <img src="/assets/img/test_image4.jpg">
+              </div>
+              <div class="TA_info_grid">
+                <h4 class="TA_title">ชื่อสถานที่ท่องเที่ยว4</h4>
+                <p class="TA_province">ชื่อจังหวัด4</p>
+                <p class="TA_type">ชื่อปรเภทสถานที่4</p>
+                <div class="lastLine_container">
+                    <button class="plusInCircle_icon_Btn">
+                      <img src="/assets/icons/plusIncircle.png" class="plusInCircle_icon">
+                    </button>
+                    <button class="icon_Btn">
+                      <img src="/assets/icons/map.png" class="map_icon">
+                    </button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        
+        <div class="section section3">My Plan
+          <div class="myPlan_container">
+            <div class="myPlan_preview" >
+              <div>Date</div>
+              <input type="date">
+
+              <div class="myPlan_preview_info">
+                <div class="myPlan_title">ชื่อสถานที่ท่องเที่ยว</div>
+                <div class="myPlan_middleLine_container">
+                    <div class="myPlan_province">ชื่อจังหวัด</div>
+                    <button class="myPlan_icon_Btn">
+                      <img src="/assets/icons/bin.png" class="bin_icon">
+                    </button>
+                </div>
+                <div class="myPlan_type">ชื่อปรเภทสถานที่</div>
+              </div>
+
+            </div>
+
+            
+            <button class="myPlan_plusInCircle_icon_Btn">
+              <img src="/assets/icons/plusIncircle.png" class="plusInCircle_icon">
+            </button>
+            
+            <button onclick="showPopup()" class="myPlan_button">Save</button>
+
+            <div class="popup">
+              <div class="popup_container">
+                <div class="popup_firstline">
+                  <h2 >ตั้งชื่อแพลนของคุณ</h2>
+                </div>
+
+                <div class="input_container">
+                  <div>Plan Name: </div>
+                  <input type="text" >
+                </div>
+                <div class="popup_lastline">
+                  <button onclick="hidePopup()" class="popup_cancel_button">Close</button>
+                  <button id="popup_save_button" class="popup_save_button">Save</button>
+                </div>
+                
+              </div>
+            </div>
+
+            
+
+            
+          </div>
+        </div>
+      </div>
+      
+      
+      <script >
+        
+        
+
+  const iconBtns = document.querySelectorAll('.icon_Btn');
+  iconBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const preview = e.target.closest('.list_preview');
+      deleteListPreview(preview);
+    });
+  });
+
+  function deleteListPreview(preview) {
+    preview.remove();
+  }
+
+
+
+
+  const plusCircleBtns = document.querySelectorAll('.plusInCircle_icon_Btn');
+  const myPlanPreview = document.querySelector('.myPlan_preview');
+  const myPlanPreviewInfoTemplate = document.querySelector('.myPlan_preview_info');
+
+  plusCircleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // retrieve data from clicked plusCircle button
+      const preview = e.target.closest('.TA_preview');
+      const title = preview.querySelector('.TA_title').textContent;
+      const province = preview.querySelector('.TA_province').textContent;
+      const type = preview.querySelector('.TA_type').textContent;
+
+      // clone myPlan_preview_info element
+      const newMyPlanPreviewInfo = myPlanPreviewInfoTemplate.cloneNode(true);
+
+      // update cloned myPlan_preview_info element with data
+      newMyPlanPreviewInfo.querySelector('.myPlan_title').textContent = title;
+      newMyPlanPreviewInfo.querySelector('.myPlan_province').textContent = province;
+      newMyPlanPreviewInfo.querySelector('.myPlan_type').textContent = type;
+
+      // add event listener to bin_icon
+      const binIcon = newMyPlanPreviewInfo.querySelector('.bin_icon');
+      binIcon.addEventListener('click', () => {
+        // remove parent element from DOM
+        newMyPlanPreviewInfo.remove();
+      });
+
+      // append updated myPlan_preview_info element to latest myPlan_preview
+      myPlanPreview.appendChild(newMyPlanPreviewInfo);
+    });
+  });
+
+  function showPopup() {
+    const popup = document.querySelector('.popup');
+    popup.classList.add('show');
+  }
+
+  function hidePopup() {
+    const popup = document.querySelector('.popup');
+    popup.classList.remove('show');
+  }
+  const saveButton = document.getElementById('popup_save_button');
+  saveButton.addEventListener('click', () => {
+    window.location.href = 'display.html';
+  });
+
+  const myPlanPlusCircleBtn = document.querySelector('.myPlan_plusInCircle_icon_Btn');
+  const myPlanContainer = document.querySelector('.myPlan_container');
+
+  myPlanPlusCircleBtn.addEventListener('click', createMyPlanPreview);
+
+  function createMyPlanPreview() {
+    const dateInput = document.createElement('input');
+    dateInput.setAttribute('type', 'date');
+
+    const myPlanPreview = document.createElement('div');
+    myPlanPreview.classList.add('myPlan_preview');
+
+    const myPlanPreviewInfo = document.createElement('div');
+    myPlanPreviewInfo.classList.add('myPlan_preview_info');
+
+    const myPlanTitle = document.createElement('div');
+    myPlanTitle.classList.add('myPlan_title');
+    myPlanTitle.textContent = 'ชื่อสถานที่ท่องเที่ยว';
+
+    const myPlanMiddleLineContainer = document.createElement('div');
+    myPlanMiddleLineContainer.classList.add('myPlan_middleLine_container');
+
+    const myPlanProvince = document.createElement('div');
+    myPlanProvince.classList.add('myPlan_province');
+    myPlanProvince.textContent = 'ชื่อจังหวัด';
+
+    const myPlanIconBtn = document.createElement('button');
+    myPlanIconBtn.classList.add('myPlan_icon_Btn');
+
+    const binIcon = document.createElement('img');
+    binIcon.classList.add('bin_icon');
+    binIcon.setAttribute('src', '/assets/icons/bin.png');
+
+    const myPlanType = document.createElement('div');
+    myPlanType.classList.add('myPlan_type');
+    myPlanType.textContent = 'ชื่อประเภทสถานที่';
+
+    
+    myPlanIconBtn.appendChild(binIcon);
+    myPlanMiddleLineContainer.appendChild(myPlanProvince);
+    myPlanMiddleLineContainer.appendChild(myPlanIconBtn);
+    myPlanPreviewInfo.appendChild(myPlanTitle);
+    myPlanPreviewInfo.appendChild(myPlanMiddleLineContainer);
+    myPlanPreviewInfo.appendChild(myPlanType);
+    myPlanPreview.appendChild(dateInput);
+    myPlanPreview.appendChild(myPlanPreviewInfo);
+    myPlanContainer.insertBefore(myPlanPreview, myPlanPlusCircleBtn);
+
+    myPlanIconBtn.addEventListener('click', () => {
+      myPlanPreview.remove();
+    });
+  }
+
+
+
+
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Choose</title>
+    <link rel="stylesheet" href="/assets/css/choose.css">
+    <style>
+    </style>
+  </head>
+  <body>
+
+    <div class="choose_container">
+      <div class="choose_title_container">
+        <div class="choose_title">Plan a new trip</div>
+      </div>
+    
+      <div class="dropdown-container">
+        <label for="dropdown-input-from" class="dropdown-label">ต้นทาง:</label>
+        <div class="dropdown">
+          <input type="text" id="dropdown-input-from" class="dropdown-input" placeholder="เลือกต้นทาง">
+          <div class="dropdown-content">
+            <a href="#">กรุงเทพมหานคร</a>
+            <a href="#">เชียงใหม่</a>
+            <a href="#">ชลบุรี</a>
+            <a href="#">โคราช</a>
+          </div>
+        </div>
+        <label for="dropdown-input-to" class="dropdown-label">ปลายทาง:</label>
+        <div class="dropdown">
+          <input type="text" id="dropdown-input-to" class="dropdown-input" placeholder="เลือกปลายทาง">
+          <div class="dropdown-content">
+            <a href="#">กรุงเทพมหานคร</a>
+            <a href="#">เชียงใหม่</a>
+            <a href="#">ชลบุรี</a>
+            <a href="#">โคราช</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="choose_btn_container">
+        <a href="result.html" class="choose_btn">start planning</a>
+      </div>
+    
+    </div>
+   
+    
+    <script>
+      const dropdownInputFrom = document.querySelector('#dropdown-input-from'); 
+      const dropdownInputTo = document.querySelector('#dropdown-input-to');
+      const dropdownContent = document.querySelector('.dropdown-content');
+
+      window.addEventListener('click', function(event) {
+        if (!event.target.matches('#dropdown-input-from') && !event.target.matches('#dropdown-input-to') && !event.target.matches('.dropdown-content a')) {
+          dropdownContent.classList.remove('show');
+        }
+      });
+
+      dropdownInputFrom.addEventListener('focus', function() {
+  dropdownContent.classList.add('show');
+});
+
+dropdownInputFrom.addEventListener('input', function(event) {
+  const searchValue = event.target.value.toLowerCase();
+  const dropdownItems = dropdownContent.querySelectorAll('a');
+
+  dropdownItems.forEach(function(item) {
+    const text = item.textContent.toLowerCase();
+
+    if (text.indexOf(searchValue) > -1) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
+
+dropdownInputTo.addEventListener('focus', function() {
+  dropdownContent.classList.add('show');
+});
+
+dropdownInputTo.addEventListener('input', function(event) {
+  const searchValue = event.target.value.toLowerCase();
+  const dropdownItems = dropdownContent.querySelectorAll('a');
+
+  dropdownItems.forEach(function(item) {
+    const text = item.textContent.toLowerCase();
+
+    if (text.indexOf(searchValue) > -1) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
+
+
+const dropdownLinksFrom = document.querySelectorAll('#dropdown-input-from + .dropdown-content a');
+dropdownLinksFrom.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    dropdownInputFrom.value = link.textContent;
+  });
+});
+
+const dropdownLinksTo = document.querySelectorAll('#dropdown-input-to + .dropdown-content a');
+dropdownLinksTo.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    dropdownInputTo.value = link.textContent;
+  });
+});
+    </script>
+  </body>
+</html>
