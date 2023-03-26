@@ -1,11 +1,8 @@
 function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  $("#name").text(profile.getName());
-  $("#email").text(profile.getEmail());
-  $("#img").attr('src', profile.getImageUrl());
-  $(".data").css("display", "block");
-  $('.start-button').show();
-  $('.g-signin2').hide();
+  var profile = googleUser.getBasicProfile().then((Response)=>{
+    console.log(Response);
+  }) ;
+
   console.log("ได้แล้ว")
 }
 
