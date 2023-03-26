@@ -1,14 +1,14 @@
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  $("#name").text(profile.getName());
+  $("#email").text(profile.getEmail());
+  $("#img").attr('src', profile.getImageUrl());
+  $(".data").css("display", "block");
+  $('.start-button').show();
+  $('.g-signin2').hide();
+  console.log("ได้แล้ว")
+}
 
-  function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    $("#name").text(profile.getName());
-    $("#email").text(profile.getName());
-    $("#img").attr('src',profile.getImageUrl)
-    $(".data").css("display","block");
-    $(".g-signin2").css("display","none");
-    $('.start-button').show();
-
-  }
 
   gapi.load('auth2', function() {
     gapi.auth2.init({
