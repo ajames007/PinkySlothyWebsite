@@ -36,7 +36,7 @@
   margin-bottom: 20px;
 }
 
-.login_button{
+.start-button{
   display: inline-block;
   background-color: #E5634B;
   padding: 18px 35px;
@@ -52,7 +52,7 @@
   border: none;
 }
 
-.login_button:hover{
+.start-button:hover{
   cursor: pointer;
   background-color: white;
   color: #E5634B;

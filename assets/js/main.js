@@ -6,6 +6,8 @@
     $("#img").attr('src',profile.getImageUrl)
     $(".data").css("display","block");
     $(".g-signin2").css("display","none");
+    $('.start-button').show();
+
   }
 
   gapi.load('auth2', function() {
