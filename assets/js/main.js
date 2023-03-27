@@ -5,7 +5,7 @@ const startBtn = document.getElementById("start-button");
 gapi.load('auth2', function() {
   // Initialize the Google Sign-In API
   gapi.auth2.init({
-    client_id: 'YOUR_CLIENT_ID',
+    client_id: '85833623378-nvjnrb68dtph5qka8s27m3ob2kumnlas.apps.googleusercontent.com',
     // Other optional parameters
   }).then(function() {
     // Obtain a reference to the GoogleAuth object
