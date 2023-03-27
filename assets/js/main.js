@@ -1,3 +1,5 @@
+ 
+ 
  // Wait for the page to load
  window.addEventListener('load', function() {
     
@@ -22,7 +24,8 @@
 
 // Load the Google Sign-In API
 gapi.load('auth2', function() {
-  // Initialize the Google Sign-In API
+  window.onLoadCallback = function(){
+    // Initialize the Google Sign-In API
   gapi.auth2.init({
     client_id: '85833623378-nvjnrb68dtph5qka8s27m3ob2kumnlas.apps.googleusercontent.com',
     // Other optional parameters
@@ -58,3 +61,6 @@ gapi.load('auth2', function() {
 });
 
 
+
+  }
+  
