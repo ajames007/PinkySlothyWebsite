@@ -48,7 +48,11 @@
         <div class="home_data">
           <h1 class="home_title">อย่าหยุดที่จะสำรวจโลก</h1>
           <span class="home_subtitle">สร้างและจัดระเบียบแผนการเดินทางของคุณในแอปพลิเคชันการเดินทางฟรีที่ออกแบบมาสำหรับการเที่ยวพักผ่อนและทริปข้างทาง</span>
-          <div class="g-signin2" data-onsuccess="onSignIn" data-text="ล็อกอิน"></div>
+          <div id="g_id_onload"
+            data-client_id="YOUR_CLIENT_ID"
+            data-callback="handleCredentialResponse">
+          </div>
+          <div class="g_id_signin" data-type="standard"></div>
           <button class="start-button" style="display: none;">เริ่มใช้งาน</button>
         </div>
 
