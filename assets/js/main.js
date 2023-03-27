@@ -1,6 +1,25 @@
-// Get the sign-in button and the start button elements
-const signInBtn = document.getElementById("g_id_signin");
-const startBtn = document.getElementById("start-button");
+ // Wait for the page to load
+ window.addEventListener('load', function() {
+    
+  // Get the elements
+  const gIdSignin = document.querySelector('.g_id_signin');
+  const startButton = document.querySelector('.start-button');
+
+  // Listen for a click event on the gIdSignin element
+  gIdSignin.addEventListener('click', function() {
+    // Hide the gIdSignin element
+    gIdSignin.style.display = 'none';
+    // Show the startButton element
+    startButton.style.display = 'block';
+  });
+
+  startButton.addEventListener('click', function() {
+    // Redirect the user to the choose.html page
+    window.location.href = 'result.html';
+  });
+});
+
+
 // Load the Google Sign-In API
 gapi.load('auth2', function() {
   // Initialize the Google Sign-In API
@@ -39,13 +58,3 @@ gapi.load('auth2', function() {
 });
 
 
-// Check if the user is logged in
-if (GoogleAuth.isSignedIn.get()) {
-  // Hide the sign-in button and show the start button
-  signInBtn.style.display = "none";
-  startBtn.style.display = "block";
-} else {
-  // Show the sign-in button and hide the start button
-  signInBtn.style.display = "block";
-  startBtn.style.display = "none";
-}
