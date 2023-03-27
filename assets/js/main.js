@@ -58,9 +58,6 @@ gapi.load('auth2', function() {
       console.error('Error signing out:', error);
     });
   });
-});
+}});
 
-
-
-  }
   
