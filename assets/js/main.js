@@ -1,6 +1,7 @@
 // Get the sign-in button and the start button elements
 const signInBtn = document.getElementById("g_id_signin");
 const startBtn = document.getElementById("start-button");
+GoogleAuth = gapi.auth2.getAuthInstance();
 
 // Check if the user is logged in
 if (GoogleAuth.isSignedIn.get()) {
