@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -60,6 +60,74 @@
       
     </section>
 
+    <script>
+      window.onLoadCallBack();{
+        // Wait for the page to load
+window.addEventListener('load', function() {
+
+// Get the elements
+const gIdSignin = document.querySelector('.g_id_signin');
+const startButton = document.querySelector('.start-button');
+
+// Listen for a click event on the gIdSignin element
+gIdSignin.addEventListener('click', function() {
+  // Hide the gIdSignin element
+  gIdSignin.style.display = 'none';
+  // Show the startButton element
+  startButton.style.display = 'block';
+});
+
+startButton.addEventListener('click', function() {
+  // Redirect the user to the result.html page
+  window.location.href = 'result.html';
+});
+
+// Load the Google Sign-In API
+gapi.load('auth2', function() {
+  // Initialize the Google Sign-In API
+  gapi.auth2.init({
+    client_id: '85833623378-nvjnrb68dtph5qka8s27m3ob2kumnlas.apps.googleusercontent.com',
+    // Other optional parameters
+  }).then(function() {
+    // Obtain a reference to the GoogleAuth object
+    const GoogleAuth = gapi.auth2.getAuthInstance();
+    
+    // Check if the user is signed in
+    if (GoogleAuth.isSignedIn.get()) {
+      // The user is signed in, do something here
+      const user = GoogleAuth.currentUser.get();
+      const profile = user.getBasicProfile();
+      console.log('User email:', profile.getEmail());
+    } else {
+      // The user is not signed in, do something else here
+      console.log('User is not signed in');
+    }
+    
+    // Listen for a click event on the gIdSignin element
+    gIdSignin.addEventListener('click', function() {
+      // Sign the user in programmatically
+      GoogleAuth.signIn().then(function() {
+        console.log('User signed in successfully');
+      }, function(error) {
+        console.error('Error signing in:', error);
+      });
+    });
+    
+    // Listen for a click event on the signOutButton element
+    const signOutButton = document.querySelector('.sign-out-button');
+    signOutButton.addEventListener('click', function() {
+      // Sign the user out programmatically
+      GoogleAuth.signOut().then(function() {
+        console.log('User signed out successfully');
+      }, function(error) {
+        console.error('Error signing out:', error);
+      });
+    });
+  });
+});
+});
+
+      }
     </script>
   </body>
 </html>
