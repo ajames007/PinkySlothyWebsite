@@ -64,51 +64,56 @@
 
         // Wait for the page to load
 
-// Load the Google Sign-In API
-gapi.load('auth2', function() {
-  console.log("gapi โหลดละคับ");
-  // Initialize the Google Sign-In API
-  gapi.auth2.init({
-    client_id: '85833623378-nvjnrb68dtph5qka8s27m3ob2kumnlas.apps.googleusercontent.com',
-    // Other optional parameters
-  }).then(function() {
-    // Obtain a reference to the GoogleAuth object
-    const GoogleAuth = gapi.auth2.getAuthInstance();
-    console.log(GoogleAuth);
-    
-    // Check if the user is signed in
-    if (GoogleAuth.isSignedIn.get()) {
-      // The user is signed in, do something here
-      const user = GoogleAuth.currentUser.get();
-      const profile = user.getBasicProfile();
-      console.log('User email:', profile.getEmail());
-    } else {
-      // The user is not signed in, do something else here
-      console.log('User is not signed in');
-    }
-    
-    // Listen for a click event on the gIdSignin element
-    gIdSignin.addEventListener('click', function() {
-      // Sign the user in programmatically
-      GoogleAuth.signIn().then(function() {
-        console.log('User signed in successfully');
-      }, function(error) {
-        console.error('Error signing in:', error);
+        window.onload = function() {
+  function handleCredentialResponse(response) {
+    console.log('Credential response:', response);
+    // Do something with the credential response
+  }
+  
+  gapi.load('auth2', function() {
+    // Initialize the Google Sign-In API
+    gapi.auth2.init({
+      client_id: '85833623378-nvjnrb68dtph5qka8s27m3ob2kumnlas.apps.googleusercontent.com',
+      // Other optional parameters
+    }).then(function() {
+      // Obtain a reference to the GoogleAuth object
+      const GoogleAuth = gapi.auth2.getAuthInstance();
+      
+      // Check if the user is signed in
+      if (GoogleAuth.isSignedIn.get()) {
+        // The user is signed in, do something here
+        const user = GoogleAuth.currentUser.get();
+        const profile = user.getBasicProfile();
+        console.log('User email:', profile.getEmail());
+      } else {
+        // The user is not signed in, do something else here
+        console.log('User is not signed in');
+      }
+      
+      // Listen for a click event on the gIdSignin element
+      gIdSignin.addEventListener('click', function() {
+        // Sign the user in programmatically
+        GoogleAuth.signIn().then(function() {
+          console.log('User signed in successfully');
+        }, function(error) {
+          console.error('Error signing in:', error);
+        });
       });
-    });
-    
-    // Listen for a click event on the signOutButton element
-    const signOutButton = document.querySelector('.sign-out-button');
-    signOutButton.addEventListener('click', function() {
-      // Sign the user out programmatically
-      GoogleAuth.signOut().then(function() {
-        console.log('User signed out successfully');
-      }, function(error) {
-        console.error('Error signing out:', error);
+      
+      // Listen for a click event on the signOutButton element
+      const signOutButton = document.querySelector('.sign-out-button');
+      signOutButton.addEventListener('click', function() {
+        // Sign the user out programmatically
+        GoogleAuth.signOut().then(function() {
+          console.log('User signed out successfully');
+        }, function(error) {
+          console.error('Error signing out:', error);
+        });
       });
     });
   });
-});
+};
+
 // Get the elements
 const gIdSignin = document.querySelector('.g_id_signin');
 const startButton = document.querySelector('.start-button');
